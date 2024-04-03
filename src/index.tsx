@@ -1,16 +1,11 @@
-import React from "react";
-import ReactDOM from 'react-dom/client';
-import './index.css';
+import ReactDOM from "react-dom/client";
+import './index.css'
 
-const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const rootElement = document.getElementById("root")!;
+const root = ReactDOM.createRoot(rootElement);
 
-// решение 1.1.6
-const element = React.createElement(
-  "h3",
-  null,
-  "Люк, я\u00A0твой\u00A0отец!\u00A0\u00A9"
-);
-root.render(element);
-
+// решение 1.1.8
+function App() {
+  return <h3>Люк, я&nbsp;твой&nbsp;отец!&nbsp;&copy;</h3>;
+}
+root.render(<App />);
